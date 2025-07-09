@@ -1,6 +1,5 @@
 library(data.table)
 library(fs)
-library(cli)
 
 meta_file <- path("data", "processed", "metadata_clean.csv")
 spec_dir  <- path("data", "processed", "spectrograms")
