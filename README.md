@@ -36,13 +36,6 @@ sessionInfo()
 
 ---
 
-## Runtime
-
-Total wall‑clock on i7/16 GB laptop: **≈ 90 min**  
-Download ~3 min · Pre‑process ~60 min · Split ~1 min
-
----
-
 ## Anomalies
 
 * No corrupt WAVs detected  
