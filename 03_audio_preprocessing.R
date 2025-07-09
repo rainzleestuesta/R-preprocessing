@@ -90,9 +90,7 @@ save_spectro <- function(sig, sr, name, out_dir) {
   np$save(file = file.path(out_dir, paste0(name, ".npy")), arr = log_mel)
 }
 
-#-------------------------------------------------------------
-# Main loop
-#-------------------------------------------------------------
+#Main
 wav_files <- dir_ls(wav_dir, regexp = "\\.wav$", recurse = TRUE)
 p <- progress_bar$new(total = length(wav_files),
                       format = "  :current/:total [:bar] :percent eta: :eta")
@@ -112,5 +110,3 @@ for (wf in wav_files) {
 
   augment_and_save(w, 44100, base, proc_dir)
 }
-
-cli::cli_alert_success("All spectrograms written to {proc_dir}")
