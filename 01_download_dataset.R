@@ -22,8 +22,6 @@ download_and_hash <- function(url, dest) {
 
   tmp <- tempfile()
   on.exit(if (file_exists(tmp)) file_delete(tmp), add = TRUE)
-
-  # stream to disk to avoid mem blow‑up
   resp <- httr::GET(url, httr::write_disk(tmp, overwrite = TRUE),
                     progress())
   stop_for_status(resp)
